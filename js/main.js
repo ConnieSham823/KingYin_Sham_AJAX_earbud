@@ -1,6 +1,4 @@
 (() => {
-
-    //variables
     const hotspots = document.querySelectorAll(".Hotspot");
     const materialTemplate = document.querySelector("#material-template");
     const materialList = document.querySelector("#material-list");
@@ -10,14 +8,16 @@
     const loader3 = document.querySelector("#loader-3");
     const loader4 = document.querySelector("#loader-4");
   
-    //functions
+
+    // 1_loading indicator
     function loadInfoBoxes() {
-     //loading indicator
+   
      loader1.classList.toggle("hidden");
      loader2.classList.toggle("hidden");
      loader3.classList.toggle("hidden");
      loader4.classList.toggle("hidden");
   
+    // 2_fetch API_hotspots
       fetch("https://swiftpixel.com/earbud/api/infoboxes")
       .then(response => response.json())
       .then(infoBoxes => {
@@ -61,6 +61,7 @@
   
     loadInfoBoxes();
   
+    // 3_fetch API_material Information
     function loadMaterialInfo() {
   
       loader.classList.toggle("hidden");
@@ -96,6 +97,7 @@
   
       loadMaterialInfo();
   
+    // function for hotspot
   
     function showInfo() {
       let selected = document.querySelector(`#${this.slot}`);
@@ -106,8 +108,6 @@
       let selected = document.querySelector(`#${this.slot}`);
       gsap.to(selected, 1, { autoAlpha: 0 });
     }
-  
-    //Event listeners
   
     hotspots.forEach(function (hotspot) {
       hotspot.addEventListener("mouseenter", showInfo);
