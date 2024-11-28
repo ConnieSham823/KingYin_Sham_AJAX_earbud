@@ -1,4 +1,4 @@
-![SKY Earbuds](images/sky_ear_readme.png)
+![SKY Earbuds](images/Novo-img.jpeg)
 
 # KingYin_Sham_AJAX_earbud
 This repository contains an AJAX-based application that dynamically updates the Earbuds Model Page using JSON and the Fetch API. It leverages the HTML Template element to display materials and includes a loading icon to indicate when content is being loaded.
